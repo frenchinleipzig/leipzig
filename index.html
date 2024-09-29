@@ -46,18 +46,67 @@
     a:hover {
       background-color: #45a049;
     }
+
+    .photo-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .photo {
+      margin: 10px;
+      flex: 1 0 30%; /* Adjusts to 3 images per row */
+    }
+
+    img {
+      width: 100%; /* Responsive images */
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .photo-description {
+      font-size: 0.9em;
+      color: #777;
+      margin-top: 5px;
+    }
+
+    .image-text {
+      font-size: 1em;
+      color: #555;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Explore Leipzig City Library on Google Earth</h1>
-    <p>You can explore the Leipzig City Library in detail using Google Earth. Click the button below to view the location on Google Earth.</p>
+    <p>You can explore the Leipzig City Library in detail using Google Earth. Below are some images related to the library.</p>
+
+    <!-- Small descriptive text above images -->
+    <p class="image-text">Here are a few views of the Leipzig City Library:</p>
+
+    <!-- Photo Section -->
+    <div class="photo-container">
+      <div class="photo">
+        <img src="https://images.unsplash.com/photo-1570821450446-4c53ed6c4171?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGxpYnJhcnklMjBsaWZlcmFyeXxlbnwwfHx8fDE2Mjg1OTM2Njg&ixlib=rb-1.2.1&q=80&w=300" alt="Leipzig City Library Image 1">
+        <p class="photo-description">Photo 1: Front view of the Leipzig City Library.</p>
+      </div>
+      <div class="photo">
+        <img src="https://images.unsplash.com/photo-1603941267108-6ec0f65e2547?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDczfHxsaWJyYXJ5JTIwYW5kJTIwY29tcGFjdHxlbnwwfHx8fDE2Mjg1OTM2NzA&ixlib=rb-1.2.1&q=80&w=300" alt="Leipzig City Library Image 2">
+        <p class="photo-description">Photo 2: Interior view of a reading area.</p>
+      </div>
+      <div class="photo">
+        <img src="https://images.unsplash.com/photo-1583056589926-0b5804b0c135?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDgwfHxsaWJyYXJ5JTIwYW5kJTIwcGFya3xlbnwwfHx8fDE2Mjg1OTM2NzM&ixlib=rb-1.2.1&q=80&w=300" alt="Leipzig City Library Image 3">
+        <p class="photo-description">Photo 3: Outdoor view with surrounding gardens.</p>
+      </div>
+    </div>
 
     <!-- Link to Google Earth -->
-    <a href="https://earth.google.com/web/search/Leipziger+Stadtbibliothek,+Wilhelm-Leuschner-Platz,+Leipzig/@51.3342638,12.37472635,116.05517578a,0d,80.55076936y,153.03204276h,105.08646524t,0r/data=CiwiJgokCaqUfGyfvElAEcD6fJjEmklAGQm1-SRkaSlAIXQn-9-wKShAQgIIASIaChZ2YjdSdkJ3RkF6OTBmZk9GNG1YbGFREAIyKQonCiUKITFEaWxKUW1VdUxkYUgtT25YdVFaZ2dpYWppWmNaREFlayABOgMKATBKCAiukZCkARAB" target="_blank">
+    <a href="https://earth.google.com/web/@51.34057156977108,12.37464390122584,1.47917471a,0d,35y,0h,0t,0r/data=ClAaVRJJCiUweDNhNjJjZjIzY2VmYzRiNjI6MHhhMjk3YjA0ODI1NDgwZjU4GrcJa1oCQzZAIghMaXB6aWc" target="_blank">
       View on Google Earth
     </a>
   </div>
 </body>
 </html>
-
