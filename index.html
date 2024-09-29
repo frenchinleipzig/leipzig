@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Embedded Google Earth Example</title>
+  <title>Embedded Google Maps Example</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -43,13 +43,15 @@
 </head>
 <body>
   <div class="container">
-    <h1>Explore Mount Everest on Google Earth</h1>
-    <p>Below is an interactive Google Earth view of Mount Everest. You can zoom in and explore the area directly from this page.</p>
+    <h1>Explore Mount Everest on Google Maps</h1>
+    <p>Below is an interactive Google Maps satellite view of Mount Everest. You can zoom in and explore the area directly from this page.</p>
 
-    <!-- Embed Google Earth in an iframe -->
-    <iframe src="https://earth.google.com/web/@28.0110723,86.91823212,6697.91256132a,6711.16354279d,35y,0.00000001h,45.01846522t,0r/data=CgRCAggBSg0I____________ARAA" 
-            width="800" height="600" allowfullscreen>
+    <!-- Embed Google Maps in an iframe (Satellite View) -->
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13876.24846711579!2d86.88896001976042!3d27.98811954848116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9b3490652d10bb2a!2sMount%20Everest!5e0!3m2!1sen!2snp!4v1635767894287!5m2!1sen!2snp" 
+      width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy">
     </iframe>
   </div>
 </body>
 </html>
+
