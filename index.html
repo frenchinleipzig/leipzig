@@ -56,12 +56,14 @@
 
     .photo {
       margin: 10px;
-      flex: 1 0 30%; /* Adjusts to 3 images per row */
+      flex: 1 0 30%; /* Adjusts to 3 placeholders per row */
     }
 
-    img {
-      width: 100%; /* Responsive images */
-      height: auto;
+    .photo-placeholder {
+      width: 300px;  /* Set width of placeholders */
+      height: 200px; /* Set height of placeholders */
+      background-color: #d3d3d3; /* Grey background for placeholder */
+      border: 3px solid black; /* Black border */
       border-radius: 8px;
     }
 
@@ -82,23 +84,23 @@
 <body>
   <div class="container">
     <h1>Explore Leipzig City Library on Google Earth</h1>
-    <p>You can explore the Leipzig City Library in detail using Google Earth. Below are some images related to the library.</p>
+    <p>You can explore the Leipzig City Library in detail using Google Earth. Below are placeholders representing images related to the library.</p>
 
-    <!-- Small descriptive text above images -->
+    <!-- Small descriptive text above placeholders -->
     <p class="image-text">Here are a few views of the Leipzig City Library:</p>
 
-    <!-- Photo Section -->
+    <!-- Photo Placeholder Section -->
     <div class="photo-container">
       <div class="photo">
-        <img src="https://images.unsplash.com/photo-1570821450446-4c53ed6c4171?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGxpYnJhcnklMjBsaWZlcmFyeXxlbnwwfHx8fDE2Mjg1OTM2Njg&ixlib=rb-1.2.1&q=80&w=300" alt="Leipzig City Library Image 1">
+        <div class="photo-placeholder"></div>
         <p class="photo-description">Photo 1: Front view of the Leipzig City Library.</p>
       </div>
       <div class="photo">
-        <img src="https://images.unsplash.com/photo-1603941267108-6ec0f65e2547?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDczfHxsaWJyYXJ5JTIwYW5kJTIwY29tcGFjdHxlbnwwfHx8fDE2Mjg1OTM2NzA&ixlib=rb-1.2.1&q=80&w=300" alt="Leipzig City Library Image 2">
+        <div class="photo-placeholder"></div>
         <p class="photo-description">Photo 2: Interior view of a reading area.</p>
       </div>
       <div class="photo">
-        <img src="https://images.unsplash.com/photo-1583056589926-0b5804b0c135?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDgwfHxsaWJyYXJ5JTIwYW5kJTIwcGFya3xlbnwwfHx8fDE2Mjg1OTM2NzM&ixlib=rb-1.2.1&q=80&w=300" alt="Leipzig City Library Image 3">
+        <div class="photo-placeholder"></div>
         <p class="photo-description">Photo 3: Outdoor view with surrounding gardens.</p>
       </div>
     </div>
