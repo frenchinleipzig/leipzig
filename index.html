@@ -47,20 +47,24 @@
       margin: 10px;
       position: relative;
       overflow: hidden;
-      transition: transform 0.3s ease-in-out;
     }
 
     /* Image styling */
     .photo img {
       width: 100%;
       height: auto;
-      transition: transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out, width 0.3s ease-in-out;
       border-radius: 8px;
     }
 
-    /* Hover Effect: Scale up the image by 30% */
+    /* Hover Effect: Scale the image up to 50% of the viewport */
     .photo:hover img {
-      transform: scale(1.3);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 50vw;
+      height: auto;
+      transform: translate(-50%, -50%);
       z-index: 10;
       box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
     }
@@ -125,3 +129,4 @@
   </div>
 </body>
 </html>
+
