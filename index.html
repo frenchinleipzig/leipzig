@@ -58,6 +58,7 @@
       margin: 10px;
       flex: 1 0 30%; /* Adjusts to 3 placeholders per row */
       position: relative; /* Position relative for hover effect */
+      overflow: hidden; /* Hide the overflow for scaling effect */
     }
 
     .photo-placeholder {
@@ -67,10 +68,14 @@
       border: 3px solid black; /* Black border */
       border-radius: 8px;
       transition: transform 0.3s; /* Smooth transition for scaling */
+      position: absolute; /* Position absolutely to center the image on hover */
+      top: 50%; /* Move to the middle vertically */
+      left: 50%; /* Move to the middle horizontally */
+      transform: translate(-50%, -50%) scale(1); /* Center the image and set scale */
     }
 
     .photo:hover .photo-placeholder {
-      transform: scale(2); /* Scale up on hover */
+      transform: translate(-50%, -50%) scale(2); /* Scale up on hover */
       z-index: 1; /* Bring the hovered photo to the front */
     }
 
@@ -132,5 +137,3 @@
   </div>
 </body>
 </html>
-
-
