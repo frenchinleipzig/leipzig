@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
-      text-align: left; /* Changed to left alignment */
+      text-align: left;
     }
 
     .container {
@@ -31,66 +31,52 @@
       color: #555;
       font-size: 1.1em;
       line-height: 1.6;
-      margin: 10px 0; /* Added margin for spacing */
-    }
-
-    a {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 20px;
-    }
-
-    a:hover {
-      background-color: #45a049;
+      margin: 10px 0;
     }
 
     .photo-container {
       display: flex;
-      justify-content: space-between; /* Changed to space-between for alignment */
+      justify-content: space-between;
       margin-top: 20px;
     }
 
     .photo {
       margin: 10px;
-      flex: 1 0 30%; /* Adjusts to 3 placeholders per row */
-      position: relative; /* Position relative for hover effect */
-      overflow: hidden; /* Hide the overflow for scaling effect */
+      position: relative;
+      flex: 1 0 30%;
+      text-align: center;
     }
 
     .photo-placeholder {
-      width: 100%; /* Set width to 100% of the container */
-      height: 200px; /* Set height of placeholders */
-      background-color: #d3d3d3; /* Grey background for placeholder */
-      border: 3px solid black; /* Black border */
+      width: 100%;
+      height: 200px;
+      background-color: #d3d3d3;
+      border: 3px solid black;
       border-radius: 8px;
-      transition: transform 0.3s; /* Smooth transition for scaling */
-      position: absolute; /* Position absolutely to center the image on hover */
-      top: 50%; /* Move to the middle vertically */
-      left: 50%; /* Move to the middle horizontally */
-      transform: translate(-50%, -50%) scale(1); /* Center the image and set scale */
+      transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
     }
 
     .photo:hover .photo-placeholder {
-      transform: translate(-50%, -50%) scale(2); /* Scale up on hover */
-      z-index: 1; /* Bring the hovered photo to the front */
+      transform: scale(2); /* Scale the image to 200% */
+      position: fixed; /* Make it fixed so it stays in the middle */
+      top: 50%; /* Vertically center it */
+      left: 50%; /* Horizontally center it */
+      transform: translate(-50%, -50%) scale(2); /* Move it to center and scale */
+      z-index: 10; /* Bring it on top */
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7); /* Add shadow for emphasis */
+    }
+
+    /* Darken background when hovering */
+    .photo-container:hover {
+      background-color: rgba(0, 0, 0, 0.7);
     }
 
     .photo-description {
       font-size: 0.9em;
       color: #777;
-      margin-top: 5px;
+      margin-top: 10px;
     }
 
-    .image-text {
-      font-size: 1em;
-      color: #555;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
   </style>
 </head>
 <body>
@@ -112,7 +98,7 @@
     </p>
 
     <!-- Small descriptive text above placeholders -->
-    <p class="image-text">Hier sind einige Ansichten der Stadtbibliothek Leipzig:</p>
+    <p>Hier sind einige Ansichten der Stadtbibliothek Leipzig:</p>
 
     <!-- Photo Placeholder Section -->
     <div class="photo-container">
@@ -126,7 +112,7 @@
       </div>
       <div class="photo">
         <div class="photo-placeholder"></div>
-        <p class="photo-description">Foto 3: Innenansicht eines Meetup-Bereichs.</p>
+        <p class="photo-description">Foto 3: Außenansicht mit den umliegenden Gärten.</p>
       </div>
     </div>
 
@@ -137,3 +123,4 @@
   </div>
 </body>
 </html>
+
