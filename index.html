@@ -11,7 +11,7 @@
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
-      text-align: center;
+      text-align: left; /* Changed to left alignment */
     }
 
     .container {
@@ -50,22 +50,28 @@
 
     .photo-container {
       display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
+      justify-content: space-between; /* Changed to space-between for alignment */
       margin-top: 20px;
     }
 
     .photo {
       margin: 10px;
       flex: 1 0 30%; /* Adjusts to 3 placeholders per row */
+      position: relative; /* Position relative for hover effect */
     }
 
     .photo-placeholder {
-      width: 300px;  /* Set width of placeholders */
+      width: 100%; /* Set width to 100% of the container */
       height: 200px; /* Set height of placeholders */
       background-color: #d3d3d3; /* Grey background for placeholder */
       border: 3px solid black; /* Black border */
       border-radius: 8px;
+      transition: transform 0.3s; /* Smooth transition for scaling */
+    }
+
+    .photo:hover .photo-placeholder {
+      transform: scale(2); /* Scale up on hover */
+      z-index: 1; /* Bring the hovered photo to the front */
     }
 
     .photo-description {
@@ -126,4 +132,5 @@
   </div>
 </body>
 </html>
+
 
